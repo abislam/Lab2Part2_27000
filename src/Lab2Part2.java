@@ -14,13 +14,13 @@ public class Lab2Part2 {
 		System.out.print("Shares: ");
 		Number_of_shares = input.nextDouble();
 		
-		System.out.print("Purchase Price: ");
+		System.out.print("Purchase Price: $");
 		Purchase_price = input.nextDouble();
 		
 		System.out.print("Purchase Commission: ");
 		Purchase_commission = input.nextDouble();
 		
-		System.out.print("Sale Price: ");
+		System.out.print("Sale Price: $");
 		Sale_price = input.nextDouble();
 		
 		System.out.print("Sale commission: ");
@@ -34,5 +34,12 @@ public class Lab2Part2 {
 		commissionTotal = (Number_of_shares * Purchase_price * Purchase_commission )+ (Number_of_shares * Sale_price * Sale_commission );
 		net_Price = commissionTotal + sharePrice;
 		
+
+		
+		if(net_Price > 0) {
+			System.out.print("Net loss of $" + net_Price);
+		}else {
+			System.out.print("Net gain of $" + net_Price);
+		}
 	}
 }
